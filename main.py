@@ -142,7 +142,7 @@ elif option == 1:
     options = language.keys()
     options.sort()
     ret = settings.dialog.select('Choose a language', options)
-    url_search = 'http://www.imdb.com/language/%s' % language[options[ret]]
+    url_search = 'http://www.imdb.com/search/title?languages=%s|1&sort=moviemeter,asc&start=1&title_type=feature' % language[options[ret]]
     listing = []
     ID = []  # IMDB_ID or thetvdb ID
     if browser.open(url_search):
